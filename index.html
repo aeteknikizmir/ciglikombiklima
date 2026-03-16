@@ -176,6 +176,19 @@ nav{position:sticky;top:0;z-index:200;background:rgba(10,10,10,.95);backdrop-fil
 .ariza-card p{font-size:13px;color:rgba(255,255,255,.4);line-height:1.65}
 .ariza-brand{display:inline-block;margin-top:12px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,61,0,.08);border:1px solid rgba(255,61,0,.14);color:var(--fire2);padding:3px 8px;border-radius:2px}
 
+/* MARKA ARIZA LİNKLERİ — YENİ */
+.ariza-brand-links{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+.abl-card{display:flex;align-items:center;justify-content:space-between;background:var(--black3);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:20px 22px;transition:all .3s;cursor:pointer}
+.abl-card:hover{border-color:rgba(255,61,0,.35);background:rgba(255,61,0,.05);transform:translateY(-3px)}
+.abl-left{display:flex;flex-direction:column;gap:4px}
+.abl-name{font-family:var(--ff-head);font-size:22px;letter-spacing:.03em;line-height:1}
+.abl-codes{font-size:11px;color:rgba(255,255,255,.3);font-weight:600;letter-spacing:.04em}
+.abl-arrow{font-size:22px;color:var(--fire);opacity:.7;transition:transform .3s}
+.abl-card:hover .abl-arrow{transform:translateX(4px)}
+.ariza-cta-note{margin-top:20px;font-size:13px;color:rgba(255,255,255,.3);text-align:center}
+.ariza-cta-note a{color:rgba(255,61,0,.7);border-bottom:1px solid rgba(255,61,0,.3);transition:color .2s}
+.ariza-cta-note a:hover{color:var(--fire)}
+
 /* BÖLGELER */
 #bolgeler{background:var(--black2)}
 .bolge-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:64px;border-radius:10px;overflow:hidden}
@@ -278,6 +291,7 @@ footer{background:#060606;padding:72px 48px 36px;border-top:1px solid rgba(255,2
   .featured-duo{grid-template-columns:1fr}
   .markalar-grid{grid-template-columns:1fr}
   .ariza-grid{grid-template-columns:1fr 1fr}
+  .ariza-brand-links{grid-template-columns:1fr 1fr}
   .bolge-grid{grid-template-columns:1fr}
   .neden-layout{grid-template-columns:1fr}
   .sss-wrap{grid-template-columns:1fr}
@@ -287,6 +301,9 @@ footer{background:#060606;padding:72px 48px 36px;border-top:1px solid rgba(255,2
   .cta-strip{padding:80px 20px}
   footer{padding:60px 20px 36px}
   .topbar{padding:10px 16px;gap:14px;font-size:11px}
+}
+@media(max-width:560px){
+  .ariza-brand-links{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -500,6 +517,40 @@ footer{background:#060606;padding:72px 48px 36px;border-top:1px solid rgba(255,2
       <div class="ariza-card"><div class="ariza-code">EA</div><h4>Alev Tespit Edilemiyor</h4><p>Alev sensörü veya ateşleme sistemi kontrolü gerekir.</p><span class="ariza-brand">Bosch · Buderus</span></div>
       <div class="ariza-card"><div class="ariza-code">C6</div><h4>Fan Motor Arızası</h4><p>Fan temizliği veya motor değişimi ile çözülür.</p><span class="ariza-brand">Bosch Condens</span></div>
     </div>
+
+    <!-- MARKA ARIZA KOD SAYFALARI — YENİ EKLEME -->
+    <div class="ariza-brand-links reveal">
+      <a href="vaillant-ariza-kodlari.html" class="abl-card">
+        <div class="abl-left">
+          <div class="abl-name">Vaillant</div>
+          <div class="abl-codes">F28 · F29 · F75 · F22 · F61 · F73</div>
+        </div>
+        <div class="abl-arrow">→</div>
+      </a>
+      <a href="demirdokum-eca-ariza-kodlari.html" class="abl-card">
+        <div class="abl-left">
+          <div class="abl-name">DemirDöküm / ECA</div>
+          <div class="abl-codes">E01 · E02 · E05 · E11 · E31 · E40</div>
+        </div>
+        <div class="abl-arrow">→</div>
+      </a>
+      <a href="baymak-ariza-kodlari.html" class="abl-card">
+        <div class="abl-left">
+          <div class="abl-name">Baymak</div>
+          <div class="abl-codes">E01 · E02 · 3A · 6P · 1P · E09</div>
+        </div>
+        <div class="abl-arrow">→</div>
+      </a>
+      <a href="bosch-buderus-ariza-kodlari.html" class="abl-card">
+        <div class="abl-left">
+          <div class="abl-name">Bosch / Buderus</div>
+          <div class="abl-codes">EA · C6 · C7 · 6A · A5 · E9</div>
+        </div>
+        <div class="abl-arrow">→</div>
+      </a>
+    </div>
+    <p class="ariza-cta-note">Markanızı görmüyor musunuz? <a href="tel:05438108096">Hemen arayın</a> — tüm markalara servis veriyoruz.</p>
+
   </div>
 </section>
 
@@ -607,13 +658,12 @@ footer{background:#060606;padding:72px 48px 36px;border-top:1px solid rgba(255,2
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Bölgeler</h4>
+      <h4>Arıza Kodları</h4>
       <ul>
-        <li><a href="#bolgeler">Çiğli Kombi Servisi</a></li>
-        <li><a href="#bolgeler">Egekent Kombi</a></li>
-        <li><a href="#bolgeler">Ulukent Kombi</a></li>
-        <li><a href="#bolgeler">Karşıyaka Petek</a></li>
-        <li><a href="#bolgeler">Menemen Kombi</a></li>
+        <li><a href="vaillant-ariza-kodlari.html">Vaillant Arıza Kodları</a></li>
+        <li><a href="demirdokum-eca-ariza-kodlari.html">DemirDöküm / ECA</a></li>
+        <li><a href="baymak-ariza-kodlari.html">Baymak Arıza Kodları</a></li>
+        <li><a href="bosch-buderus-ariza-kodlari.html">Bosch / Buderus</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -631,8 +681,6 @@ footer{background:#060606;padding:72px 48px 36px;border-top:1px solid rgba(255,2
     <span>© 2025 A&E Teknik Kombi Klima Servisi — Çiğli / İzmir</span>
     <span>Her Gün 08:00–22:00</span>
   </div>
-
-  <!-- SEO KEYWORD BLOĞU - Güncellendi -->
   <div class="footer-seo">
     Çiğli kombi servisi · Çiğli kombi tamiri · Çiğli kombi bakımı · Çiğli Demirdöküm kombi servisi · Çiğli Baymak kombi servisi · Çiğli Vaillant kombi servisi · Çiğli Bosch kombi servisi · Çiğli Buderus kombi servisi · Çiğli Ferroli kombi servisi · Çiğli Ariston kombi servisi · Çiğli ECA kombi servisi · Çiğli Viessmann kombi servisi · Çiğli Warmhaus kombi servisi · Çiğli Protherm kombi servisi · Çiğli Lambert kombi servisi · Çiğli Airfel kombi servisi · Çiğli Arçelik kombi servisi · Çiğli İmmergas kombi servisi ·
     Evka-5 kombi servisi · Evka-5 kombi tamiri · Evka-5 kombi bakımı · Evka-5 Demirdöküm kombi servisi · Evka-5 Baymak kombi servisi · Evka-5 Vaillant kombi servisi · Evka-5 Bosch kombi servisi · Evka-5 Ferroli kombi servisi · Evka-5 Ariston kombi servisi · Evka-5 ECA kombi servisi · Evka-5 Warmhaus kombi servisi · Evka-5 Protherm kombi servisi ·
