@@ -171,6 +171,19 @@ nav{position:sticky;top:0;z-index:200;background:rgba(10,10,10,.95);backdrop-fil
 .bolge-tags{display:flex;flex-wrap:wrap;gap:8px}
 .bolge-tag{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:5px 11px;border-radius:2px;font-size:12px;font-weight:600;color:rgba(255,255,255,.6);transition:all .2s}
 .bolge-tag:hover{background:rgba(255,61,0,.09);border-color:rgba(255,61,0,.22);color:var(--fire2)}
+.maps-wrap{margin-top:48px;background:var(--black3);border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden}
+.maps-header{display:flex;align-items:center;justify-content:space-between;padding:20px 28px;border-bottom:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:12px}
+.maps-title{font-family:var(--ff-head);font-size:22px;letter-spacing:.03em;margin-bottom:4px}
+.maps-sub{font-size:13px;color:rgba(255,255,255,.4)}
+.maps-btn{background:var(--fire);color:white;padding:10px 18px;border-radius:4px;font-family:var(--ff-head);font-size:16px;letter-spacing:.04em;transition:all .2s;white-space:nowrap}
+.maps-btn:hover{background:var(--fire2);transform:translateY(-1px)}
+.maps-frame{padding:0}
+.maps-frame iframe{display:block}
+.maps-info-row{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid rgba(255,255,255,.06)}
+.maps-info-item{flex:1;min-width:200px;padding:14px 20px;font-size:13px;color:rgba(255,255,255,.55);border-right:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:8px}
+.maps-info-item:last-child{border-right:none}
+.maps-info-item a{color:var(--fire2);transition:color .2s}
+.maps-info-item a:hover{color:var(--fire)}
 #neden{background:var(--black)}
 .neden-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:64px;align-items:start}
 .neden-items{display:flex;flex-direction:column}
@@ -234,6 +247,67 @@ footer{background:#060606;padding:72px 48px 36px;border-top:1px solid rgba(255,2
 .float-t{background:var(--fire);box-shadow:0 4px 24px rgba(255,61,0,.4)}
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .65s ease,transform .65s ease}
 .reveal.in{opacity:1;transform:translateY(0)}
+.fiyat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px}
+.fiyat-card{background:var(--black2);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:36px 32px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.fiyat-card:hover{border-color:rgba(255,61,0,.35);transform:translateY(-4px)}
+.fiyat-card-ice:hover{border-color:rgba(0,200,255,.3)!important}
+.fiyat-card-servis:hover{border-color:rgba(255,179,0,.3)!important}
+.fiyat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--fire);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.fiyat-card:hover::before{transform:scaleX(1)}
+.fiyat-card-ice::before{background:var(--ice)}
+.fiyat-card-servis::before{background:var(--fire3)}
+.fiyat-icon{font-size:40px;margin-bottom:14px}
+.fiyat-name{font-family:var(--ff-head);font-size:28px;letter-spacing:.03em;margin-bottom:10px}
+.fiyat-range{font-family:var(--ff-head);font-size:42px;color:var(--fire);letter-spacing:.02em;margin-bottom:14px;line-height:1}
+.fiyat-card-ice .fiyat-range{color:var(--ice)}
+.fiyat-range-split{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.fiyat-range-split>div{display:flex;flex-direction:column;gap:4px}
+.fiyat-range-sub{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.fiyat-range-num{font-family:var(--ff-head);font-size:36px;color:var(--fire3);line-height:1}
+.fiyat-divider{width:1px;height:48px;background:rgba(255,255,255,.1)}
+.fiyat-desc{font-size:14px;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:16px}
+.fiyat-chips{display:flex;flex-wrap:wrap;gap:8px}
+.fiyat-chip{font-size:11px;font-weight:700;letter-spacing:.06em;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:4px 10px;border-radius:2px;color:rgba(255,255,255,.5)}
+.fiyat-note{margin-top:28px;text-align:center;font-size:14px;color:rgba(255,255,255,.4);line-height:1.7}
+.google-badge-inner{display:inline-flex;align-items:center;gap:20px;background:var(--black3);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px 28px;flex-wrap:wrap;margin-bottom:32px}
+.google-g{width:44px;height:44px;background:#4285F4;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px;color:white;flex-shrink:0;font-family:Arial,sans-serif}
+.google-stars{color:#FBBC05;font-size:20px;letter-spacing:2px;margin-bottom:4px}
+.google-info{font-size:14px;color:rgba(255,255,255,.7)}
+.google-btn{background:var(--fire);color:white;padding:12px 20px;border-radius:4px;font-family:var(--ff-head);font-size:17px;letter-spacing:.04em;transition:all .2s;white-space:nowrap;box-shadow:0 4px 20px rgba(255,61,0,.35)}
+.google-btn:hover{background:var(--fire2);transform:translateY(-2px)}
+.yorum-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.yorum-card{background:var(--black3);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:26px;transition:border-color .3s}
+.yorum-card:hover{border-color:rgba(255,61,0,.2)}
+.yorum-stars{color:#FBBC05;font-size:14px;letter-spacing:2px;margin-bottom:12px}
+.yorum-text{font-size:14px;font-style:italic;color:rgba(255,255,255,.6);line-height:1.75;margin-bottom:16px}
+.yorum-author{display:flex;align-items:center;gap:10px}
+.yorum-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--ff-head);font-size:18px;color:white;flex-shrink:0}
+.yorum-name{font-size:13px;font-weight:700}
+.yorum-loc{font-size:12px;color:rgba(255,255,255,.3);margin-top:2px}
+.randevu-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px}
+.randevu-card{display:block;border-radius:12px;padding:36px 32px;border:1px solid rgba(255,255,255,.07);transition:all .3s;cursor:pointer;text-decoration:none;color:white}
+.randevu-card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.4)}
+.randevu-fire{background:linear-gradient(135deg,rgba(255,61,0,.15),rgba(255,61,0,.04));border-color:rgba(255,61,0,.2)}
+.randevu-fire:hover{border-color:rgba(255,61,0,.5)}
+.randevu-ice{background:linear-gradient(135deg,rgba(0,200,255,.1),rgba(0,200,255,.03));border-color:rgba(0,200,255,.15)}
+.randevu-ice:hover{border-color:rgba(0,200,255,.4)}
+.randevu-amber{background:linear-gradient(135deg,rgba(255,179,0,.12),rgba(255,179,0,.03));border-color:rgba(255,179,0,.15)}
+.randevu-amber:hover{border-color:rgba(255,179,0,.4)}
+.randevu-green{background:linear-gradient(135deg,rgba(102,187,106,.1),rgba(102,187,106,.03));border-color:rgba(102,187,106,.15)}
+.randevu-green:hover{border-color:rgba(102,187,106,.4)}
+.randevu-icon{font-size:44px;margin-bottom:16px}
+.randevu-title{font-family:var(--ff-head);font-size:30px;letter-spacing:.03em;margin-bottom:8px;line-height:1}
+.randevu-sub{font-size:14px;color:rgba(255,255,255,.45);line-height:1.6;margin-bottom:20px}
+.randevu-btn{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;padding:12px 20px;border-radius:4px;font-family:var(--ff-head);font-size:17px;letter-spacing:.04em;transition:transform .2s}
+.randevu-card:hover .randevu-btn{transform:translateX(4px)}
+.randevu-btn-ice{background:var(--ice2)}
+.randevu-btn-amber{background:#E6A800}
+.randevu-btn-green{background:#388E3C}
+@media(max-width:900px){
+  .fiyat-grid{grid-template-columns:1fr}
+  .yorum-grid{grid-template-columns:1fr}
+  .randevu-grid{grid-template-columns:1fr}
+}
 @media(max-width:900px){
   body{cursor:auto}
   .cursor,.cursor-ring{display:none}
@@ -283,11 +357,11 @@ footer{background:#060606;padding:72px 48px 36px;border-top:1px solid rgba(255,2
   <div class="nav-logo">A<span class="amp">&</span>E<span style="color:rgba(255,255,255,.18);font-size:18px;margin:0 8px">|</span><span style="color:rgba(255,255,255,.45);font-size:17px;letter-spacing:.08em">TEKNİK</span></div>
   <ul class="nav-links">
     <li><a href="#hizmetler">Hizmetler</a></li>
-    <li><a href="#oncplan">Petek & Klima</a></li>
+    <li><a href="#fiyatlar">Fiyatlar</a></li>
     <li><a href="#markalar">Markalar</a></li>
     <li><a href="#arizalar">Arıza Kodları</a></li>
-    <li><a href="#bolgeler">Bölgeler</a></li>
-    <li><a href="#sss">SSS</a></li>
+    <li><a href="#yorumlar">Yorumlar</a></li>
+    <li><a href="#randevu">Randevu</a></li>
   </ul>
   <a href="tel:05438108096" class="nav-cta">📞 HEMEN ARA</a>
 </nav>
@@ -538,6 +612,36 @@ footer{background:#060606;padding:72px 48px 36px;border-top:1px solid rgba(255,2
         </div>
       </div>
     </div>
+
+    <!-- GOOGLE MAPS EMBED -->
+    <div class="maps-wrap reveal">
+      <div class="maps-header">
+        <div>
+          <div class="maps-title">📍 A&E Teknik — Evka-5, Çiğli / İzmir</div>
+          <div class="maps-sub">Hizmet bölgenizde miyiz? Haritadan kontrol edin.</div>
+        </div>
+        <a href="https://maps.app.goo.gl/rzrdUtPZLtoPof379" target="_blank" class="maps-btn">Google Maps'te Aç →</a>
+      </div>
+      <div class="maps-frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3122.45!2d27.0542!3d38.5178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2bf11d0f02780cbd%3A0xf50d275abfae4187!2sA%26E%20Teknik%20Kombi%20Klima%20Servisi!5e0!3m2!1str!2str!4v1234567890"
+          width="100%"
+          height="400"
+          style="border:0;border-radius:0;filter:grayscale(20%) contrast(1.05)"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="A&E Teknik Kombi Klima Servisi - Çiğli İzmir Konum">
+        </iframe>
+      </div>
+      <div class="maps-info-row">
+        <div class="maps-info-item">📍 <span>Evka-5, 8928. Sk., 35610 Çiğli / İzmir</span></div>
+        <div class="maps-info-item">📞 <a href="tel:05438108096">0543 810 80 96</a></div>
+        <div class="maps-info-item">⏰ <span>Her Gün 08:00 – 22:00</span></div>
+        <div class="maps-info-item">⭐ <span>5.0 · 80 Google Yorumu</span></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -581,6 +685,151 @@ footer{background:#060606;padding:72px 48px 36px;border-top:1px solid rgba(255,2
         <div class="sss-item"><button class="sss-q" onclick="faq(this)">Kombi bakımı gerçekten gerekli mi?<span class="sss-arr">+</span></button><div class="sss-a">Evet. Yıllık bakımlı kombiler hem daha az arıza yapar hem de yakıtı daha verimli kullanır. Kış öncesi Ekim-Kasım en uygun dönemdir.</div></div>
         <div class="sss-item"><button class="sss-q" onclick="faq(this)">Geldiğinizde fiyat değişiyor mu?<span class="sss-arr">+</span></button><div class="sss-a">Hayır. Telefonda anlatırsanız tahmini fiyat veriyoruz. Ekstra bir durum çıkarsa önce sizi bilgilendirip onay alıyoruz. Sürpriz fatura politikamız yoktur.</div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FİYATLAR -->
+<section class="section" id="fiyatlar" style="background:var(--black3)">
+  <div class="section-inner">
+    <div class="sec-eyebrow">Şeffaf Fiyatlandırma</div>
+    <h2 class="sec-title reveal">SÜRPRIZ FATURA YOK —<br>BAŞTAN BİLİRSİNİZ</h2>
+    <p class="sec-sub reveal">Aşağıdaki fiyatlar başlangıç ücretleridir. Gelmeden önce durumu anlatın, net fiyat verelim. Ekstra çıkarsa önce sizi ararız.</p>
+    <div class="fiyat-grid reveal">
+
+      <div class="fiyat-card">
+        <div class="fiyat-icon">♨️</div>
+        <div class="fiyat-name">Petek Temizliği</div>
+        <div class="fiyat-range">1.500 – 2.500 ₺</div>
+        <div class="fiyat-desc">Daire büyüklüğüne ve petek sayısına göre. Makinalı kimyasal yıkama, basınç testi dahil.</div>
+        <div class="fiyat-chips">
+          <span class="fiyat-chip">Kapalı devre sistem</span>
+          <span class="fiyat-chip">Zemine damlat­maz</span>
+        </div>
+      </div>
+
+      <div class="fiyat-card">
+        <div class="fiyat-icon">🔥</div>
+        <div class="fiyat-name">Kombi Bakımı</div>
+        <div class="fiyat-range">2.000 – 3.000 ₺</div>
+        <div class="fiyat-desc">Yıllık bakım, eşanjör temizliği, gaz ayarı, sensör kontrolü. Parça değişimi ayrıca hesaplanır — önce bilgi verilir.</div>
+        <div class="fiyat-chips">
+          <span class="fiyat-chip">Tüm markalar</span>
+          <span class="fiyat-chip">Aynı gün</span>
+        </div>
+      </div>
+
+      <div class="fiyat-card fiyat-card-ice">
+        <div class="fiyat-icon">❄️</div>
+        <div class="fiyat-name">Klima Bakımı</div>
+        <div class="fiyat-range">1.500 – 2.000 ₺</div>
+        <div class="fiyat-desc">İç ve dış ünite köpüklü yıkama, filtre temizliği, gaz basınç kontrolü. Sezon öncesi şimdi yaptırın.</div>
+        <div class="fiyat-chips">
+          <span class="fiyat-chip">Bakteri arındırma</span>
+          <span class="fiyat-chip">Tüm markalar</span>
+        </div>
+      </div>
+
+      <div class="fiyat-card fiyat-card-servis">
+        <div class="fiyat-icon">🚐</div>
+        <div class="fiyat-name">Servis Ücreti</div>
+        <div class="fiyat-range-split">
+          <div><span class="fiyat-range-sub">Yakın bölge</span><span class="fiyat-range-num">500 ₺</span></div>
+          <div class="fiyat-divider"></div>
+          <div><span class="fiyat-range-sub">Uzak bölge</span><span class="fiyat-range-num">750 ₺</span></div>
+        </div>
+        <div class="fiyat-desc">Çiğli, Egekent, Evka-5 yakın bölge. Karşıyaka, Menemen, Bornova uzak bölge.</div>
+        <div class="fiyat-chips">
+          <span class="fiyat-chip">İşlem ücretine dahil edilir</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="fiyat-note reveal">
+      💬 Net fiyat almak için <a href="https://wa.me/905438108096?text=Merhaba%2C%20fiyat%20bilgisi%20almak%20istiyorum." style="color:var(--fire2);border-bottom:1px solid rgba(255,107,26,.3)">WhatsApp'tan yazın</a> — durumu anlatın, dakika içinde cevap verelim.
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE YORUMLAR -->
+<section class="section" id="yorumlar" style="background:var(--black2)">
+  <div class="section-inner">
+    <div class="sec-eyebrow">Müşteri Yorumları</div>
+    <h2 class="sec-title reveal">80 YORUM —<br>HEPSI GERÇEK MÜŞTERİ</h2>
+    <p class="sec-sub reveal">Google'da 5.0 puan ile İzmir'in kuzeyinde en yüksek puanlı kombi servisi.</p>
+
+    <div class="google-badge reveal">
+      <div class="google-badge-inner">
+        <div class="google-g">G</div>
+        <div>
+          <div class="google-stars">★★★★★</div>
+          <div class="google-info"><strong>5.0</strong> · 80 Google Yorumu</div>
+        </div>
+        <a href="https://maps.app.goo.gl/rzrdUtPZLtoPof379" target="_blank" class="google-btn">Tüm Yorumları Gör →</a>
+      </div>
+    </div>
+
+    <div class="yorum-grid reveal">
+      <div class="yorum-card">
+        <div class="yorum-stars">★★★★★</div>
+        <p class="yorum-text">"Kombi arızası için sabah aradım, öğleden önce geldi. Hem hızlı hem dürüst — gereksiz parça takmadan sorunu çözdü. Kesinlikle tavsiye ederim."</p>
+        <div class="yorum-author"><div class="yorum-av" style="background:#EA4335">M</div><div><div class="yorum-name">Mehmet A.</div><div class="yorum-loc">Egekent · Google Yorumu</div></div></div>
+      </div>
+      <div class="yorum-card">
+        <div class="yorum-stars">★★★★★</div>
+        <p class="yorum-text">"Klima temizliği için çağırdım, çok profesyonel çalıştı. Etrafa hiç kir saçmadan temizledi. Fiyat da söylediği gibi — sürpriz çıkmadı."</p>
+        <div class="yorum-author"><div class="yorum-av" style="background:#34A853">S</div><div><div class="yorum-name">Selin K.</div><div class="yorum-loc">Evka-5 · Google Yorumu</div></div></div>
+      </div>
+      <div class="yorum-card">
+        <div class="yorum-stars">★★★★★</div>
+        <p class="yorum-text">"Petek temizliği yaptırdık, odalar artık çok daha iyi ısınıyor. Faturalar da düştü. Bir daha ihtiyaç olsa yine aynı yeri arayacağım."</p>
+        <div class="yorum-author"><div class="yorum-av" style="background:#4285F4">H</div><div><div class="yorum-name">Hasan T.</div><div class="yorum-loc">Ulukent · Google Yorumu</div></div></div>
+      </div>
+      <div class="yorum-card">
+        <div class="yorum-stars">★★★★★</div>
+        <p class="yorum-text">"Gece kombim bozuldu, sabah ilk işim aramak oldu. Aynı gün geldi, aynı gün çözüldü. Başka servislerin randevu bile vermediği günde iş bitti."</p>
+        <div class="yorum-author"><div class="yorum-av" style="background:#FF6B1A">F</div><div><div class="yorum-name">Fatma Y.</div><div class="yorum-loc">Mavişehir · Google Yorumu</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP RANDEVU -->
+<section class="section" id="randevu" style="background:var(--black)">
+  <div class="section-inner">
+    <div class="sec-eyebrow">Randevu Al</div>
+    <h2 class="sec-title reveal">WHATSAPP'TAN<br>RANDEVU AL</h2>
+    <p class="sec-sub reveal">Telefona bakamadığım anlarda bile WhatsApp mesajınız kaybolmaz. Görür görmez dönüyorum.</p>
+    <div class="randevu-grid reveal">
+
+      <a href="https://wa.me/905438108096?text=Merhaba%2C%20kombi%20bak%C4%B1m%C4%B1%20i%C3%A7in%20randevu%20almak%20istiyorum." class="randevu-card randevu-fire">
+        <div class="randevu-icon">🔥</div>
+        <div class="randevu-title">Kombi Bakım & Tamir</div>
+        <div class="randevu-sub">Hazır mesajla WhatsApp açılır — sadece gönderin</div>
+        <div class="randevu-btn">WhatsApp'ta Randevu Al →</div>
+      </a>
+
+      <a href="https://wa.me/905438108096?text=Merhaba%2C%20klima%20temizli%C4%9Fi%20i%C3%A7in%20randevu%20almak%20istiyorum." class="randevu-card randevu-ice">
+        <div class="randevu-icon">❄️</div>
+        <div class="randevu-title">Klima Temizliği</div>
+        <div class="randevu-sub">Sezon dolmadan şimdi yerinizi ayırtın</div>
+        <div class="randevu-btn randevu-btn-ice">WhatsApp'ta Randevu Al →</div>
+      </a>
+
+      <a href="https://wa.me/905438108096?text=Merhaba%2C%20petek%20temizli%C4%9Fi%20i%C3%A7in%20randevu%20almak%20istiyorum." class="randevu-card randevu-amber">
+        <div class="randevu-icon">♨️</div>
+        <div class="randevu-title">Petek Temizliği</div>
+        <div class="randevu-sub">Oda ısınmıyor mu? Hemen bakalım</div>
+        <div class="randevu-btn randevu-btn-amber">WhatsApp'ta Randevu Al →</div>
+      </a>
+
+      <a href="https://wa.me/905438108096?text=Merhaba%2C%20tesisat%20i%C5%9Fi%20i%C3%A7in%20randevu%20almak%20istiyorum." class="randevu-card randevu-green">
+        <div class="randevu-icon">🔧</div>
+        <div class="randevu-title">Tesisat İşleri</div>
+        <div class="randevu-sub">Batarya, klozet, musluk — küçük işler de geliyoruz</div>
+        <div class="randevu-btn randevu-btn-green">WhatsApp'ta Randevu Al →</div>
+      </a>
+
     </div>
   </div>
 </section>
